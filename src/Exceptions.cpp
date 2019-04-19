@@ -2,7 +2,7 @@
 // Created by user on 2019-02-27.
 //
 
-#include <GNUPlotWrapper/GNUPlotWrapper.h>
+#include <GnuplotWrapper/GnuplotWrapper.h>
 
 
 plot::PipeException::PipeException() : runtime_error("PipeException") {}

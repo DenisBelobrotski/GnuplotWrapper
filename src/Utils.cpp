@@ -4,7 +4,7 @@
 
 #include <sstream>
 
-#include <GNUPlotWrapper/GNUPlotWrapper.h>
+#include <GnuplotWrapper/GnuplotWrapper.h>
 
 
 void plot::convertComponentsVectorsToPointsVector(

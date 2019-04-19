@@ -5,7 +5,7 @@
 #include <sstream>
 #include <cmath>
 
-#include <GNUPlotWrapper/GNUPlotWrapper.h>
+#include <GnuplotWrapper/GnuplotWrapper.h>
 
 
 plot::Plot::Plot()
