@@ -1,11 +1,9 @@
-//
-// Created by Denis Belobrotski on 2019-02-26.
-//
+#include "GnuplotWrapper/Plot.h"
 
 #include <sstream>
 #include <cmath>
 
-#include <GnuplotWrapper/GnuplotWrapper.h>
+#include <GnuplotWrapper/Exceptions.h>
 
 
 plot::Plot::Plot()

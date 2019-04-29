@@ -1,8 +1,4 @@
-//
-// Created by user on 2019-02-27.
-//
-
-#include <GnuplotWrapper/GnuplotWrapper.h>
+#include "GnuplotWrapper/Exceptions.h"
 
 
 plot::PipeException::PipeException() : runtime_error("PipeException") {}

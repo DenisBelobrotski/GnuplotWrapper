@@ -1,11 +1,7 @@
-//
-// Created by denis Belobrotski on 2019-02-26.
-//
-
 #pragma once
 
 
-#define GNUPLOT             "gnuplot"
+#define GNUPLOT "gnuplot"
 
 
 #ifdef WIN32

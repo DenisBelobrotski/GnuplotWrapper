@@ -1,10 +1,10 @@
-//
-// Created by user on 2019-02-27.
-//
+#include "GnuplotWrapper/Utils.h"
 
 #include <sstream>
+#include <cmath>
+#include <cfloat>
 
-#include <GnuplotWrapper/GnuplotWrapper.h>
+#include <GnuplotWrapper/Exceptions.h>
 
 
 void plot::convertComponentsVectorsToPointsVector(
@@ -29,5 +29,27 @@ void plot::convertComponentsVectorsToPointsVector(
     {
         pointsVector[i].x = xComponents[i];
         pointsVector[i].y = yComponents[i];
+    }
+}
+
+
+void plot::optimizeRangesBounds(plot::AxesRanges& axesRanges, std::vector<plot::Graph>& graphs)
+{
+    axesRanges.xAxisRange.end = DBL_MIN;
+    axesRanges.yAxisRange.end = DBL_MIN;
+
+    axesRanges.xAxisRange.start = DBL_MAX;
+    axesRanges.yAxisRange.start = DBL_MAX;
+
+    for (auto& currentGraph : graphs)
+    {
+        for (auto& currentPoint : currentGraph.points)
+        {
+            axesRanges.xAxisRange.end = std::max(axesRanges.xAxisRange.end, currentPoint.x);
+            axesRanges.yAxisRange.end = std::max(axesRanges.yAxisRange.end, currentPoint.y);
+
+            axesRanges.xAxisRange.start = std::min(axesRanges.xAxisRange.start, currentPoint.x);
+            axesRanges.yAxisRange.start = std::min(axesRanges.yAxisRange.start, currentPoint.y);
+        }
     }
 }
