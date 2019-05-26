@@ -13,3 +13,6 @@ include_directories(${RAPIDJSON_ROOT}/include)
 file(GLOB_RECURSE proj_sources ${CMAKE_CURRENT_SOURCE_DIR}/src/*.cpp)
 
 add_library(GnuplotWrapper STATIC ${proj_sources})
+
+install(TARGETS GnuplotWrapper
+        DESTINATION ${CMAKE_CURRENT_SOURCE_DIR}/bin)
